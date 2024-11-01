@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Site de Révision - Mathématiques</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<header>
-			<h1>Révision Mathématiques - Étude des Fonctions</h1>
-			<nav>
-				<a href="#definitions">Définitions</a>
-				<a href="#signes">Intervalles de Signe</a>
-				<a href="#extremums">Extremums</a>
-				<a href="#transformations">Transformations</a>
-			</nav>
-		</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révisions Multi-Matières</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-		<section id="definitions">
-			<h2>Définitions</h2>
-			<p>Une fonction est une relation...</p>
-			<!-- Ajoutez plus de contenu ici -->
-		</section>
+    <header>
+        <h1>Site de Révision pour Matières Scolaires</h1>
+        <nav>
+            <a href="#math">Mathématiques</a>
+            <a href="#sciences">Sciences</a>
+            <a href="#francais">Français</a>
+            <a href="#historique">Histoire</a>
+        </nav>
+    </header>
 
-		<section id="signes">
-			<h2>Intervalles de Signe</h2>
-			<p>Les intervalles de signe permettent de définir...</p>
-			<!-- Ajoutez plus de contenu ici -->
-		</section>
+    <section id="math">
+        <h2>Mathématiques</h2>
+        <p>Accédez aux définitions, exercices, et quiz pour réviser les concepts mathématiques.</p>
+        <form action="quiz.php" method="POST">
+            <label>Définissez la fonction quadratique :</label><br>
+            <input type="text" name="math_answer" required>
+            <button type="submit">Soumettre</button>
+        </form>
+        <p id="mathResult"></p>
+    </section>
 
-		<section id="extremums">
-			<h2>Extremums</h2>
-			<p>
-				Les extremums correspondent aux valeurs maximales et
-				minimales...
-			</p>
-			<!-- Ajoutez plus de contenu ici -->
-		</section>
+    <section id="sciences">
+        <h2>Sciences</h2>
+        <p>Testez vos connaissances scientifiques.</p>
+        <form action="quiz.php" method="POST">
+            <label>Quelle est la formule de l'eau ?</label><br>
+            <input type="text" name="science_answer" required>
+            <button type="submit">Soumettre</button>
+        </form>
+        <p id="scienceResult"></p>
+    </section>
 
-		<section id="transformations">
-			<h2>Transformations</h2>
-			<p>
-				Les transformations d'une fonction sont définies par les
-				paramètres a, b, h, et k...
-			</p>
-			<!-- Ajoutez plus de contenu ici -->
-		</section>
+    <section id="francais">
+        <h2>Français</h2>
+        <p>Révisez la grammaire, la conjugaison, et le vocabulaire.</p>
+        <form action="quiz.php" method="POST">
+            <label>Qu'est-ce qu'un verbe à l'infinitif ?</label><br>
+            <input type="text" name="francais_answer" required>
+            <button type="submit">Soumettre</button>
+        </form>
+        <p id="francaisResult"></p>
+    </section>
 
-		<section id="notes">
-			<h2>Notes de Révision</h2>
-			<form action="review.php" method="post">
-				<textarea
-					name="note"
-					placeholder="Ajoutez vos notes ici..."
-				></textarea>
-				<button type="submit">Enregistrer la Note</button>
-			</form>
-			<div id="notes-container">
-				<!-- JavaScript va charger les notes ici -->
-			</div>
-		</section>
+    <section id="historique">
+        <h2>Histoire</h2>
+        <p>Testez vos connaissances en histoire avec ce quiz.</p>
+        <form action="quiz.php" method="POST">
+            <label>En quelle année a eu lieu la Révolution française ?</label><br>
+            <input type="text" name="history_answer" required>
+            <button type="submit">Soumettre</button>
+        </form>
+        <p id="historyResult"></p>
+    </section>
 
-		<script src="script.js"></script>
-	</body>
+    <script src="app.js"></script>
+</body>
 </html>
